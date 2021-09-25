@@ -102,10 +102,13 @@ async def play(ctx, url: str):
         # check if the bot is already connected to a voice channel and join the channel if not
         await ctx.send("hello1")
         voice_client = discord.utils.get(bot.voice_clients, guild=ctx.guild)
-        if voice_client == None:
-            voice_channel = voice_state.channel
-            await voice_channel.connect()
         await ctx.send("hello2")
+        if voice_client == None:
+            await ctx.send("hello3")
+            voice_channel = voice_state.channel
+            await ctx.send("hello4")
+            await voice_channel.connect()
+        await ctx.send("hello5")
 
         # create youtube_dl options
         youtube_dl_options = {
