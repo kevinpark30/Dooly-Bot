@@ -90,7 +90,6 @@ async def play(ctx, url: str):
     else:
         # check if there is a song file
         song_exists = os.path.isfile("song.webm")
-        await ctx.send(str(song_exists))
         try:
             # if the song file is there, remove it (we need to play a new song since this event is called)
             if song_exists:
@@ -100,15 +99,10 @@ async def play(ctx, url: str):
             await ctx.send("Wait till the song ends or use the '$stop' command to end the song.")
 
         # check if the bot is already connected to a voice channel and join the channel if not
-        await ctx.send("hello1")
         voice_client = discord.utils.get(bot.voice_clients, guild=ctx.guild)
-        await ctx.send("hello2")
         if voice_client == None:
-            await ctx.send("hello3")
             voice_channel = voice_state.channel
-            await ctx.send("hello4")
             await voice_channel.connect()
-        await ctx.send("hello5")
 
         # create youtube_dl options
         youtube_dl_options = {
