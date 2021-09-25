@@ -186,7 +186,7 @@ async def amogus(ctx):
 # BOT_COMMAND: Dooly sends doomfingers picture
 @bot.command(name="doomfingers", help="sends doomfingers")
 async def doomfingers(ctx):
-    filepath = os.getcwd() + "/Pictures/doomfingers.png"
+    filepath = os.path.join(os.getcwd(), "Pictures", "doomfingers.png")
     await ctx.send(file=discord.File(filepath))
 
 # BOT_COMMAND: Dooly sends maplestory gif
