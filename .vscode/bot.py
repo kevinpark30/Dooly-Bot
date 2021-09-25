@@ -192,19 +192,19 @@ async def doomfingers(ctx):
 # BOT_COMMAND: Dooly sends maplestory gif
 @bot.command(name="maplestory", help="sends maplestory gif")
 async def maplestory(ctx):
-    filepath = os.getcwd() + "\\Pictures\\maple-story-jon.gif"
+    filepath = os.getcwd() + "/Pictures/maple-story-jon.gif"
     await ctx.send(file=discord.File(filepath))
 
 # BOT_COMMAND: Dooly sends attention picture
 @bot.command(name="overwatch", help="Tells everyone to play Overwatch")
 async def overwatch(ctx):
-    filepath = os.getcwd() + "\\Pictures\\overwatch.png"
+    filepath = os.getcwd() + "/Pictures/overwatch.png"
     await ctx.send(file=discord.File(filepath))
 
 # BOT_COMMAND: Dooly sends cringe gif
 @bot.command(name="cringe", help="Tells someone they are cringe")
 async def cringe(ctx):
-    filepath = os.getcwd() + "\\Pictures\\cringe.gif"
+    filepath = os.getcwd() + "/Pictures/cringe.gif"
     await ctx.send(file=discord.File(filepath))
 
 bot.run(TOKEN)
