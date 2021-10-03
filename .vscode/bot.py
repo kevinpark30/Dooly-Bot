@@ -201,6 +201,11 @@ async def overwatch(ctx):
     filepath = os.path.join(os.getcwd(), "Pictures", "overwatch.png")
     await ctx.send(file=discord.File(filepath))
 
+# BOT_COMMAND: Dooly tells people to play Overwatch
+@bot.command(name="overwatch2", help="Tells everyone to play overwatch")
+async def overwatch2(ctx):
+    await ctx.send("I am stupid.")
+
 # BOT_COMMAND: Dooly sends cringe gif
 @bot.command(name="cringe", help="Tells someone they are cringe")
 async def cringe(ctx):
